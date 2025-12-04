@@ -75,8 +75,69 @@ function formatDateTime(iso) {
 
 const DEFAULT_APP_INFO = {
     activities: [],
-    prayers: [],
-    notes: []
+    notes: [],
+    prayers: [
+        {
+            "id": "pry_1762030800008_66430",
+            "title": "Ato de Contrição",
+            "text": "Meu Deus, eu me arrependo de todo o coração de Vos ter ofendido. Proponho firmemente não mais pecar e evitar todas as ocasiões de pecado. Perdoai-me, Senhor, pela vossa infinita misericórdia. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800006_99102",
+            "title": "Angelus Domini",
+            "text": "V. O Anjo do Senhor anunciou a Maria. R. E ela concebeu do Espírito Santo. Ave Maria... V. Eis aqui a escrava do Senhor. R. Faça-se em mim segundo a vossa palavra. Ave Maria... V. E o Verbo se fez carne. R. E habitou entre nós. Ave Maria... V. Rogai por nós, Santa Mãe de Deus. R. Para que sejamos dignos das promessas de Cristo. Oremos: Derramai, ó Deus, a vossa graça em nossos corações, para que, conhecendo pela mensagem do Anjo a encarnação do vosso Filho, cheguemos, pela sua paixão e cruz, à glória da ressurreição. Por Cristo, Senhor nosso. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800001_48211",
+            "title": "Ave Maria",
+            "text": "Ave Maria, cheia de graça, o Senhor é convosco; bendita sois vós entre as mulheres, e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora de nossa morte. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800004_77412",
+            "title": "Credo",
+            "text": "Creio em Deus Pai todo-poderoso, criador do céu e da terra. E em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo, nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado; desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus; está sentado à direita de Deus Pai todo-poderoso, de onde há de vir a julgar os vivos e os mortos. Creio no Espírito Santo; na Santa Igreja Católica; na comunhão dos santos; na remissão dos pecados; na ressurreição da carne; na vida eterna. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800005_33781",
+            "title": "Credo Niceno-Constantinopolitano",
+            "text": "Creio em um só Deus, Pai todo-poderoso, criador do céu e da terra, de todas as coisas visíveis e invisíveis. Creio em um só Senhor, Jesus Cristo, Filho unigênito de Deus, nascido do Pai antes de todos os séculos: Deus de Deus, luz da luz, Deus verdadeiro de Deus verdadeiro, gerado, não criado, consubstancial ao Pai. Por Ele todas as coisas foram feitas. E por nós, homens, e para nossa salvação, desceu dos céus: e se encarnou pelo Espírito Santo, no seio da Virgem Maria, e se fez homem. Também por nós foi crucificado sob Pôncio Pilatos; padeceu e foi sepultado. Ressuscitou ao terceiro dia, conforme as Escrituras, e subiu aos céus, onde está sentado à direita do Pai. De novo há de vir, em sua glória, para julgar os vivos e os mortos; e o seu reino não terá fim. Creio no Espírito Santo, Senhor que dá a vida, e procede do Pai e do Filho; e com o Pai e o Filho é adorado e glorificado: Ele que falou pelos profetas. Creio na Igreja, una, santa, católica e apostólica. Professo um só batismo para remissão dos pecados. E espero a ressurreição dos mortos e a vida do mundo que há de vir. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800010_55792",
+            "title": "Meditação",
+            "text": "Antes: Meu Senhor e Meu Deus, creio firmemente que estás aqui, que me vês, que me ouves. Adoro-Te com profunda reverência. Peço-Te perdão dos meus pecados e graça para fazer com fruto este tempo de oração. Minha Mãe Imaculada, São José, meu Pai e Senhor, meu Anjo da Guarda, intercedei por mim.\nDepois: Dou-te graças, meu Deus, pelos bons propósitos, afetos e inspirações que me comunicaste nesta meditação; peço-Te ajuda para os pôr em prática. Minha Mãe Imaculada, São José, meu Pai e Senhor, meu Anjo da Guarda, intercedei por mim.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800003_12955",
+            "title": "Pai Nosso",
+            "text": "Pai nosso, que estais no céu, santificado seja o vosso nome; venha a nós o vosso reino; seja feita a vossa vontade, assim na terra como no céu. O pão nosso de cada dia nos dai hoje; perdoai-nos as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido; e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800007_22547",
+            "title": "Regina Caeli",
+            "text": "Rainha do Céu, alegrai-vos, aleluia. Porque Aquele que merecestes trazer em vosso ventre, aleluia, ressuscitou como disse, aleluia. Rogai a Deus por nós, aleluia. V. Exultai e alegrai-vos, ó Virgem Maria, aleluia. R. Pois o Senhor ressuscitou verdadeiramente, aleluia. Oremos: Ó Deus, que vos dignastes alegrar o mundo com a ressurreição do vosso Filho, nosso Senhor Jesus Cristo; concedei, nós vos pedimos, que por sua Mãe, a Virgem Maria, alcancemos as alegrias da vida eterna. Por Cristo, nosso Senhor. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800002_59344",
+            "title": "Santo Anjo",
+            "text": "Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        },
+        {
+            "id": "pry_1762030800009_88321",
+            "title": "Vinde, Espírito Santo",
+            "text": "Vinde, Espírito Santo, enchei os corações dos vossos fiéis e acendei neles o fogo do vosso amor. Enviai o vosso Espírito e tudo será criado, e renovareis a face da terra. Oremos: Ó Deus, que instruístes os corações dos vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos sempre da sua consolação. Por Cristo, Senhor nosso. Amém.",
+            "createdAt": "2025-11-01T18:40:00.000Z"
+        }
+    ]
 };
 
 function getAppInfo() {
@@ -172,7 +233,10 @@ function renderActivities() {
         container.innerHTML = `<p class="empty-state">Nenhuma atividade cadastrada!</p>`;
         return;
     }
-    const nowMinutes = 12 * 60;
+
+    const now = new Date();
+    const nowMinutes = now.getHours() * 60 + now.getMinutes();
+
     let nextIndex = activities.findIndex(act => {
         const m = parseTimeToMinutes(act.time);
         return m !== null && m >= nowMinutes;
@@ -454,7 +518,8 @@ function openActivityDetails(activityId) {
         prayers.forEach((prayer) => {
             const pEl = document.createElement("p");
             pEl.className = "prayer-text";
-            pEl.innerHTML = `<br><strong>${prayer.title}</strong><br>${prayer.text}<br>`;
+            const safePrayerText = (prayer.text || "").replace(/\n/g, "<br>");
+            pEl.innerHTML = `<br><strong>${prayer.title}</strong><br>${safePrayerText}<br>`;
             block.appendChild(pEl);
         });
         prayersContainer.appendChild(block);
@@ -660,7 +725,8 @@ function openPrayerDetails(prayerId) {
     viewContainer.classList.remove("is-hidden");
     editForm.classList.add("is-hidden");
     editBtn.classList.remove("is-hidden");
-    textEl.textContent = prayer.text || "";
+    const safePrayerText = (prayer.text || "").replace(/\n/g, "<br>");
+    textEl.innerHTML = safePrayerText;
 }
 
 function closePrayerDetails() {
@@ -708,7 +774,16 @@ function setPage(page) {
     const headerButton = document.getElementById("btn-criar-atividade");
     if (pageTitle) {
         if (page === "hoje") {
-            pageTitle.innerHTML = 'Hoje <span>19 nov</span>';
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, "0");
+
+            const monthNames = [
+                "jan", "fev", "mar", "abr", "mai", "jun",
+                "jul", "ago", "set", "out", "nov", "dez"
+            ];
+            const month = monthNames[today.getMonth()]; // 0–11
+
+            pageTitle.innerHTML = `Hoje <span>${day} ${month}</span>`;
         } else if (page === "caderno") {
             pageTitle.textContent = "Caderno";
         } else if (page === "oracoes") {
