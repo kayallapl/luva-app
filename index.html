@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hoje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="app-screen">
+        <header>
+            <p class="page-title">Hoje <span>19 nov</span></p>
+            <button class="btn btn-primary" id="btn-criar-atividade">
+                <svg class="icon" fill="none" viewBox="0 0 19 20">
+                    <path d="M0.5 9.51374H9.5M9.5 9.51374H18.5M9.5 9.51374V18.5275M9.5 9.51374V0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Criar
+            </button>
+        </header>
+            <div class="app-content">
+                        <div id="page-hoje" class="page page--active">
+                <div id="activities-list"></div>
+            </div>
+        
+            <div id="page-caderno" class="page">
+                <div id="notes-list"></div>
+            </div>
+        
+            <div id="page-oracoes" class="page">
+                <div id="prayers-list"></div>
+            </div>
+        
+        </div>
+    
+    <footer>
+        <button id="btn-hoje" class="btn btn-primary">
+            <svg width="14" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M4.25 2.38889H3.50019C2.45008 2.38889 1.92464 2.38889 1.52356 2.59477C1.17075 2.77586 0.884122 3.06461 0.704366 3.42003C0.5 3.82409 0.5 4.35342 0.5 5.4113V6.16667M4.25 2.38889H11.75M4.25 2.38889V0.5M0.5 6.16667V14.478C0.5 15.5358 0.5 16.0645 0.704366 16.4686C0.884122 16.824 1.17075 17.1132 1.52356 17.2943C1.92425 17.5 2.44905 17.5 3.4971 17.5H12.5029C13.5509 17.5 14.075 17.5 14.4757 17.2943C14.8285 17.1132 15.1161 16.824 15.2958 16.4686C15.5 16.0649 15.5 15.537 15.5 14.4812V6.16667M0.5 6.16667H15.5M11.75 2.38889H12.5002C13.5503 2.38889 14.0746 2.38889 14.4757 2.59477C14.8285 2.77586 15.1161 3.06461 15.2958 3.42003C15.5 3.82369 15.5 4.35238 15.5 5.40819V6.16667M11.75 2.38889V0.5M11.75 13.7222H11.7519V13.7241H11.75V13.7222ZM8 13.7222H8.00187V13.7241H8V13.7222ZM4.25 13.7222H4.25187L4.25183 13.7241H4.25V13.7222ZM11.7519 9.94444V9.94633H11.75V9.94444H11.7519ZM8 9.94444H8.00187V9.94633H8V9.94444ZM4.25 9.94444H4.25187L4.25183 9.94633H4.25V9.94444Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Hoje
+        </button>
+        <button id="btn-caderno" class="btn btn-secondary">
+            <svg width="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M4.25 0.5H3.50019C2.45008 0.5 1.92464 0.5 1.52356 0.704366C1.17075 0.884122 0.884122 1.17075 0.704366 1.52356C0.5 1.92464 0.5 2.45008 0.5 3.50019V12.5002C0.5 13.5503 0.5 14.0751 0.704366 14.4762C0.884122 14.8289 1.17075 15.1161 1.52356 15.2958C1.92425 15.5 2.44905 15.5 3.4971 15.5H4.25M4.25 0.5H12.5002C13.5503 0.5 14.0746 0.5 14.4757 0.704366C14.8285 0.884122 15.1161 1.17075 15.2958 1.52356C15.5 1.92425 15.5 2.44905 15.5 3.4971V12.5034C15.5 13.5514 15.5 14.0755 15.2958 14.4762C15.1161 14.8289 14.8285 15.1161 14.4757 15.2958C14.075 15.5 13.5509 15.5 12.5029 15.5H4.25M4.25 0.5V15.5M8 7.0625H11.75M8 4.25H11.75"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Caderno
+        </button>
+        <button id="btn-oracoes" class="btn btn-secondary">
+            <svg width="12" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.5 3.64846V12.9803C0.5 14.3193 0.5 14.9887 0.68711 15.3984C1.03391 16.1578 1.79394 16.5943 2.57503 16.4827C2.99645 16.4225 3.5155 16.0511 4.55359 15.3084L4.55607 15.3066C4.96756 15.0122 5.17326 14.865 5.38858 14.7834C5.78385 14.6333 6.21523 14.6333 6.6105 14.7834C6.82619 14.8651 7.03272 15.013 7.44586 15.3085C8.48398 16.0513 9.00364 16.4224 9.42503 16.4825C10.2061 16.5941 10.9661 16.1578 11.3129 15.3984C11.5 14.9888 11.5 14.3191 11.5 12.9803V3.64522C11.5 2.54537 11.5 1.99464 11.3004 1.57415C11.1246 1.2039 10.8434 0.903105 10.4985 0.714465C10.1063 0.5 9.59361 0.5 8.56685 0.5H3.43352C2.40675 0.5 1.89299 0.5 1.50082 0.714465C1.15585 0.903105 0.875586 1.2039 0.699824 1.57415C0.5 1.99505 0.5 2.54646 0.5 3.64846Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Orações
+        </button>
+    </footer>
+
+    <div class="modal-overlay" id="activity-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <svg class="icon" fill="none" viewBox="0 0 19 20">
+                        <path d="M0.5 9.51374H9.5M9.5 9.51374H18.5M9.5 9.51374V18.5275M9.5 9.51374V0.5" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Criar
+                </div>
+                <button class="btn btn-secondary btn-inline modal-close" type="button" id="activity-modal-close">
+                    ✕
+                </button>
+            </div>
+    
+            <form id="activity-form" class="modal-form">
+                <div class="form-group">
+                    <input type="text" id="activity-title" name="title" placeholder="Título" required />
+                </div>
+    
+                <div class="form-group">
+                    <div class="form-group-item">Quando: <input type="time" id="activity-time" name="time" required /></div>
+                    <div class="form-group-item">Repete: 
+                        <div class="days-grid">
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="mon" />
+                                <span>S</span>
+                            </label>
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="tue" />
+                                <span>T</span>
+                            </label>
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="wed" />
+                                <span>Q</span>
+                            </label>
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="thu" />
+                                <span>Q</span>
+                            </label>
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="fri" />
+                                <span>S</span>
+                            </label>
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="sat" />
+                                <span>S</span>
+                            </label>
+                            <label class="day-chip">
+                                <input type="checkbox" name="daysOfWeek" value="sun" />
+                                <span>D</span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <div class="form-group-item">
+                        Cronômetro:
+                        <div class="form-inline">
+                            <input type="checkbox" id="activity-has-timer" name="hasTimer" />
+                            <input type="number" id="activity-timer-minutes" name="timerMinutes" min="1" placeholder="Minutos" />
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    Orações:
+                    <select id="activity-prayer-ids" name="prayerIds" multiple size="4">
+                    </select>
+                
+                    <button type="button" class="btn btn-secondary btn-inline" id="btn-add-prayer-inline">
+                        + Adicionar oração
+                    </button>
+                </div>
+                
+                <div class="form-group is-hidden" id="inline-prayer-form">
+                    <input type="text" id="inline-prayer-title" placeholder="Título da Oração" />
+                    <textarea id="inline-prayer-text" rows="3" placeholder="Escreva o texto da oração..."></textarea>
+                
+                    <div class="inline-actions">
+                        <button type="button" class="btn btn-secondary" id="inline-prayer-cancel">
+                            ✕ Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="inline-prayer-save">
+                            <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 6.50006L6.50038 12.5L18.5 0.5" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-actions">
+                <button type="submit" form="activity-form" class="btn btn-primary">
+                    <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 6.50006L6.50038 12.5L18.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Concluir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="activity-details-modal">
+        <div class="modal modal-details">
+            <div class="modal-header">
+                <h2 class="modal-title" id="details-title">Título da atividade</h2>
+                <button class="btn btn-secondary btn-inline modal-close" type="button" id="activity-details-close">
+                    ✕
+                </button>
+            </div>
+    
+            <div class="activity-details-body">
+                <div class="details-timer is-hidden" id="details-timer">
+                    <div class="timer-circle">
+                        <svg class="timer-svg" viewBox="0 0 180 180">
+                            <circle class="timer-bg" cx="90" cy="90" r="80" />
+                        
+                            <g id="timer-rotating">
+                                <circle class="timer-progress" cx="90" cy="90" r="80" />
+                                <circle class="timer-dot" cx="90" cy="10" r="5" />
+                            </g>
+                        </svg>
+                        <span class="timer-value" id="details-timer-value">15:00</span>
+                    </div>
+                </div>
+
+                <div class="details-prayers is-hidden" id="details-prayers">
+                </div>
+            
+            </div>
+
+            <div class="details-actions">
+                <button type="button" class="btn btn-primary" id="details-start">
+                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.5 15.1851V2.81583C0.5 1.79587 0.5 1.28533 0.713443 0.983548C0.89974 0.720152 1.18688 0.547218 1.50566 0.505878C1.87077 0.458519 2.31858 0.698687 3.21291 1.17832L14.7447 7.36295L14.749 7.36481C15.7373 7.89487 16.2317 8.16008 16.3939 8.51341C16.5354 8.82176 16.5354 9.17764 16.3939 9.48587C16.2315 9.83978 15.7359 10.106 14.7447 10.6376L3.21291 16.8222C2.31794 17.3022 1.87091 17.5415 1.50566 17.4941C1.18688 17.4527 0.89974 17.2799 0.713443 17.0164C0.5 16.7147 0.5 16.2051 0.5 15.1851Z"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Iniciar
+                </button>
+        
+                <div class="details-running-actions is-hidden" id="details-running-actions">
+                    <button type="button" class="btn btn-secondary" id="details-note">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.1993 3.95122L0.5 11.6504V15.5H4.34965L12.0489 7.8008M8.1993 3.95122L10.9601 1.19042L10.9618 1.18878C11.3418 0.808752 11.5321 0.618399 11.7516 0.547105C11.9449 0.484298 12.1531 0.484298 12.3464 0.547105C12.5657 0.618351 12.7558 0.808483 13.1353 1.18798L14.8097 2.86236C15.1908 3.24349 15.3815 3.43414 15.4529 3.65389C15.5157 3.84717 15.5157 4.05538 15.4529 4.24868C15.3816 4.46826 15.1912 4.65862 14.8106 5.0392L14.8097 5.04002L12.0489 7.8008M8.1993 3.95122L12.0489 7.8008"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Anotar
+                    </button>
+                    <button type="button" class="btn btn-primary" id="details-complete">
+                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.5 6.5H16.5M0.5 6.5V15.3002C0.5 16.4203 0.5 16.9801 0.71799 17.4079C0.90973 17.7842 1.21547 18.0905 1.5918 18.2822C2.0192 18.5 2.57899 18.5 3.69691 18.5H13.3031C14.421 18.5 14.98 18.5 15.4074 18.2822C15.7837 18.0905 16.0905 17.7842 16.2822 17.4079C16.5 16.9805 16.5 16.4215 16.5 15.3036V6.5M0.5 6.5V5.7002C0.5 4.58009 0.5 4.01962 0.71799 3.5918C0.90973 3.21547 1.21547 2.90973 1.5918 2.71799C2.01962 2.5 2.58009 2.5 3.7002 2.5H4.5M16.5 6.5V5.69691C16.5 4.57899 16.5 4.0192 16.2822 3.5918C16.0905 3.21547 15.7837 2.90973 15.4074 2.71799C14.9796 2.5 14.4203 2.5 13.3002 2.5H12.5M4.5 2.5H12.5M4.5 2.5V0.5M12.5 2.5V0.5M11.5 10.5L7.5 14.5L5.5 12.5"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Concluir atividade
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="activity-compact">
+            <span class="activity-compact-title" id="activity-compact-title">
+                Atividade
+            </span>
+            <span class="activity-compact-time" id="activity-compact-time">
+                15:00
+            </span>
+            <button type="button" class="activity-compact-expand" id="activity-compact-expand">
+                +
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="activity-completed-modal">
+        <div class="modal modal-completed">
+            <div class="modal-completed-body">
+                <p>Atividade concluída!</p>
+            </div>
+            <button class="btn btn-secondary btn-inline modal-close" type="button" id="activity-completed-close">
+                ✕
+            </button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="note-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.1993 3.95122L0.5 11.6504V15.5H4.34965L12.0489 7.8008M8.1993 3.95122L10.9601 1.19042L10.9618 1.18878C11.3418 0.808752 11.5321 0.618399 11.7516 0.547105C11.9449 0.484298 12.1531 0.484298 12.3464 0.547105C12.5657 0.618351 12.7558 0.808483 13.1353 1.18798L14.8097 2.86236C15.1908 3.24349 15.3815 3.43414 15.4529 3.65389C15.5157 3.84717 15.5157 4.05538 15.4529 4.24868C15.3816 4.46826 15.1912 4.65862 14.8106 5.0392L14.8097 5.04002L12.0489 7.8008M8.1993 3.95122L12.0489 7.8008"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Anotar
+                </h2>
+                <button class="btn btn-secondary btn-inline modal-close" type="button" id="note-modal-close">✕</button>
+            </div>
+    
+            <form id="note-form" class="modal-form">
+                <div class="form-group">
+                    <input type="text" id="note-title" name="noteTitle" placeholder="Título" />
+                </div>
+    
+                <div class="form-group" style="height: 100%;">
+                    <textarea id="note-text" name="noteText" placeholder="Escreva aqui..."></textarea>
+                </div>
+    
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="note-cancel">✕ Cancelar</button>
+                    <button type="submit" class="btn btn-primary">
+                        <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 6.50006L6.50038 12.5L18.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="note-details-modal">
+        <div class="modal modal-details">
+            <div class="modal-header">
+                <h2 id="note-details-title">
+                    <span id="note-details-icon-label"  class="modal-title">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.1993 3.95122L0.5 11.6504V15.5H4.34965L12.0489 7.8008M8.1993 3.95122L10.9601 1.19042L10.9618 1.18878C11.3418 0.808752 11.5321 0.618399 11.7516 0.547105C11.9449 0.484298 12.1531 0.484298 12.3464 0.547105C12.5657 0.618351 12.7558 0.808483 13.1353 1.18798L14.8097 2.86236C15.1908 3.24349 15.3815 3.43414 15.4529 3.65389C15.5157 3.84717 15.5157 4.05538 15.4529 4.24868C15.3816 4.46826 15.1912 4.65862 14.8106 5.0392L14.8097 5.04002L12.0489 7.8008M8.1993 3.95122L12.0489 7.8008"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Anotar
+                    </span>
+                
+                    <span id="note-details-title-text" class="note-details-title-text"></span>
+                </h2>
+
+                <button class="btn btn-secondary btn-inline modal-close" type="button" id="note-details-close">✕</button>
+            </div>
+    
+            <div class="note-details-body">
+                <p class="note-details-tag is-hidden" id="note-details-activity-tag"></p>
+    
+                <div class="note-details-view" id="note-details-view">
+                    <p id="note-details-text"></p>
+                </div>
+    
+                <form class="note-details-edit is-hidden" id="note-details-edit-form">
+                    <div class="form-group">
+                        <input type="text" id="note-edit-title" placeholder="Título" />
+                    </div>
+                    <div class="form-group" style="height: 100%;">
+                        <textarea id="note-edit-text" placeholder="Escreva aqui..."></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="note-edit-cancel">✕ Cancelar</button>
+                        <button type="submit" class="btn btn-primary">
+                        <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 6.50006L6.50038 12.5L18.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Salvar
+                    </button>
+                    </div>
+                </form>
+    
+                <div class="note-details-footer">
+                    <button type="button" class="btn btn-secondary" id="note-details-edit-btn">
+                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.89664 2.27778H2.19832C1.26036 2.27778 0.5 3.07372 0.5 4.05556V14.7222C0.5 15.7041 1.26036 16.5 2.19832 16.5H3.89664M3.89664 2.27778C3.89664 1.29594 4.657 0.5 5.59495 0.5H7.29327C8.23125 0.5 8.99159 1.29594 8.99159 2.27778M3.89664 2.27778V4.05556H8.99159V2.27778M8.99159 2.27778H10.6899C11.6279 2.27778 12.3882 3.07372 12.3882 4.05556V5.83333M8.90837 15.9083L7.05152 16.297L7.42285 14.3533C7.4558 14.1812 7.53656 14.0232 7.6551 13.8991L12.8128 8.5L14.5 10.2661L9.34229 15.6652C9.22375 15.7892 9.07277 15.8739 8.90837 15.9083Z" stroke="#67B6CB" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="prayer-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <svg class="icon" fill="none" viewBox="0 0 19 20">
+                        <path d="M0.5 9.51374H9.5M9.5 9.51374H18.5M9.5 9.51374V18.5275M9.5 9.51374V0.5" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Criar
+                </h2>
+                <button class="btn btn-secondary btn-inline modal-close" type="button" id="prayer-modal-close">✕</button>
+            </div>
+    
+            <form id="prayer-form" class="modal-form">
+                <div class="form-group">
+                    <input type="text" id="prayer-title" name="prayerTitle" placeholder="Título" />
+                </div>
+    
+                <div class="form-group" style="height: 100%;">
+                    <textarea id="prayer-text" name="prayerText" placeholder="Escreva aqui..."></textarea>
+                </div>
+    
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="prayer-cancel">✕ Cancelar</button>
+                    <button type="submit" class="btn btn-primary">
+                        <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 6.50006L6.50038 12.5L18.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="prayer-details-modal">
+        <div class="modal modal-details">
+            <div class="modal-header">
+                <h2 id="prayer-details-title">
+                    <span id="prayer-details-icon-label" class="modal-title">
+                        <svg class="icon" fill="none" viewBox="0 0 19 20">
+                            <path d="M0.5 9.51374H9.5M9.5 9.51374H18.5M9.5 9.51374V18.5275M9.5 9.51374V0.5" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Criar
+                    </span>
+                
+                    <span id="prayer-details-title-text" class="prayer-details-title-text"></span>
+                </h2>
+
+                <button class="btn btn-secondary btn-inline modal-close" type="button" id="prayer-details-close">✕</button>
+            </div>
+    
+            <div class="prayer-details-body">
+                <div class="prayer-details-view" id="prayer-details-view">
+                    <p id="prayer-details-text"></p>
+                </div>
+    
+                <form class="prayer-details-edit is-hidden" id="prayer-details-edit-form">
+                    <div class="form-group">
+                        <input type="text" id="prayer-edit-title" />
+                    </div>
+                    <div class="form-group" style="height: 100%;">
+                        <textarea id="prayer-edit-text" rows="8"></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="prayer-edit-cancel">✕ Cancelar</button>
+                        <button type="submit" class="btn btn-primary">
+                            <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 6.50006L6.50038 12.5L18.5 0.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Salvar
+                        </button>
+                    </div>
+                </form>
+    
+                <div class="prayer-details-footer">
+                    <button type="button" class="btn btn-secondary" id="prayer-details-edit-btn">
+                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.89664 2.27778H2.19832C1.26036 2.27778 0.5 3.07372 0.5 4.05556V14.7222C0.5 15.7041 1.26036 16.5 2.19832 16.5H3.89664M3.89664 2.27778C3.89664 1.29594 4.657 0.5 5.59495 0.5H7.29327C8.23125 0.5 8.99159 1.29594 8.99159 2.27778M3.89664 2.27778V4.05556H8.99159V2.27778M8.99159 2.27778H10.6899C11.6279 2.27778 12.3882 3.07372 12.3882 4.05556V5.83333M8.90837 15.9083L7.05152 16.297L7.42285 14.3533C7.4558 14.1812 7.53656 14.0232 7.6551 13.8991L12.8128 8.5L14.5 10.2661L9.34229 15.6652C9.22375 15.7892 9.07277 15.8739 8.90837 15.9083Z" stroke="#67B6CB" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
